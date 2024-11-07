@@ -6,20 +6,10 @@
   "types": "dist/index.d.ts",
   "scripts": {
     "build:ts": "tsc",
-    "build:babel": "babel dist --out-dir dist --extensions \".js\"",
+    "build:babel": "babel dist --out-dir dist",
     "build": "npm run build:ts && npm run build:babel",
     "prepare": "npm run build"
   },
-  "exports": {
-    ".": {
-      "import": "./dist/index.esm.js",
-      "require": "./dist/index.js"
-    }
-  },
-  "files": [
-    "dist",
-    "README.md"
-  ],
   "peerDependencies": {
     "react": ">=16.8.0",
     "react-dom": ">=16.8.0"
